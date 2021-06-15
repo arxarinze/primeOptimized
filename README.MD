@@ -1,3 +1,17 @@
+# Installation
+
+git clone repo
+npm install
+npm run start
+rename .env.example to .env
+
+### OR
+
+install docker
+git clone repo
+docker build --rm --pull -f "Dockerfile" -t "stably:latest" "./"
+docker run --rm -it -p 8000:8000/tcp stably:latest
+
 # Decisions
 
 I utilized an algorithm known as the **sieve of Eratosthenes** for calculating the prime to the input N,
@@ -12,7 +26,7 @@ I actually learnt this algorithm in a course in the university _CSC 202 Data Str
 
 /POST
 
-/prime
+localhost:8000/prime
 
 ```
 {
