@@ -1,4 +1,4 @@
-class Prime {
+class NumberI {
     number: number;
     constructor(number: number) {
         this.number = number;
@@ -25,4 +25,4 @@ class Prime {
     }
 }
 
-export default Prime;
+export default NumberI;
