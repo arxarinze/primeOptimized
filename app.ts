@@ -16,3 +16,5 @@ app.use(`/prime`, prime)
 app.listen(port, () => {
   return console.log(`server is listening on ${port}`);
 });
+
+export default app
