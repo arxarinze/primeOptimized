@@ -7,6 +7,8 @@ export class NumberService {
 
     isPrime = (num:number):boolean=> {
         if(num < 2) return false;
+        if(num % 2 == 0) return false;
+        if(num %3 == 0 ) return false;
       
         for (let k = 2; k < num; k++){
           if( num % k == 0){
