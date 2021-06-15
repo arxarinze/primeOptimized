@@ -1,6 +1,6 @@
 # Decisions
 
-I utilized an algorithm known as the **sieve of Eratosthenes** for calculating the prime,
+I utilized an algorithm known as the **sieve of Eratosthenes** for calculating the prime to the input N,
 I actually learnt this algorithm in a course in the university _CSC 202 Data Structure and Algorithms_
 
 - I have utilized typescript with the express framework to create the service that solves the specification:
@@ -10,8 +10,9 @@ I actually learnt this algorithm in a course in the university _CSC 202 Data Str
 
 ### Get Larget Prime Number Lower Tham Input
 
-\POST
-\prime
+/POST
+
+/prime
 
 ```
 {

@@ -11,14 +11,16 @@ export const requireJsonContent = () => {
 }
 
 export const requireNumberGreaterThanOne = () => {
-    return (request: any, response: any, next: any)=>{let number = request.body.number ?? 0;
-    if (number <= 1) {
-        response.status(400).send({
-            status: 400,
-            message: "invalid input number should be > 0"
-        })
+    return (request: any, response: any, next: any) => {
+        let number = request.body.number || 0;
+        if (number <= 1) {
+            response.status(400).send({
+                status: 400,
+                message: "invalid input number should be > 0"
+            })
+        }
+        else {
+            next()
+        }
     }
-    else{
-        next()
-    }}
 }
