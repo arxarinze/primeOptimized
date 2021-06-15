@@ -16,6 +16,7 @@
 
 I utilized an algorithm known as the **sieve of Eratosthenes** for calculating the prime to the input N,
 I actually learnt this algorithm in a course in the university _CSC 202 Data Structure and Algorithms_
+However it would be faster to instead of getting the list of numbers between but instead calculating from the input number down till we arrive at the highest prime lower than the input
 
 - I have utilized typescript with the express framework to create the service that solves the specification:
   - Create a web application that takes in a number and returns to the user the highest prime number lower than the input number

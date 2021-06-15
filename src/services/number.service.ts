@@ -5,23 +5,25 @@ export class NumberService {
         this.input = number
     }
 
+    isPrime = (num:number):boolean=> {
+        if(num < 2) return false;
+      
+        for (let k = 2; k < num; k++){
+          if( num % k == 0){
+            return false;
+          }
+        }
+        return true;
+      }
+
     seiveOfEra = (): number => {
-        const numberArr = new Array(this.input.number + 1);
-        numberArr.fill(true);
-        numberArr[0] = numberArr[1] = false;
-        for (let i = 2; i <= Math.sqrt(this.input.number); i++) {
-            for (let j = 2; i * j <= this.input.number; j++) {
-                numberArr[i * j] = false;
+        let number = 0
+        for (let i = this.input.number-1; i > 2; i--) {
+            if(this.isPrime(i)){
+                number = i;
+                break;
             }
         }
-        let result = numberArr.reduce((a, v, i) => {
-            if (v) {
-                return a.concat(i);
-            } else {
-                return a;
-            };
-        }, []);
-        result = result.filter((number :number) => number !== this.input.number);
-        return result[result.length - 1];
+        return number;
     }
 }
